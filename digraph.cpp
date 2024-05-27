@@ -24,4 +24,7 @@ bool DiGraph::hasEdge(std::string node_1, std::string node_2) {
 
 }
 
+std::string DiGraph::getDiGraphAsString() {
+    std::string diGraphString;
+}
 

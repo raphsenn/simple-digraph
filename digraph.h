@@ -8,7 +8,7 @@ Simple Implementation of a directed Graph.
 
 #pragma once
 
-#include <map>
+#include <unordered_map>
 #include <tuple>
 #include <vector>
 #include <string>
@@ -22,8 +22,11 @@ public:
     bool hasNode(std::string node);
     bool hasEdge(std::string node1, std::string node2);
 
-private:
-    std::map<std::string, std::vector<std::tuple<std::string, double>>> adjacencyList_;
+    std::string getDiGraphAsString();
 
+
+private:
+    std::unordered_map<std::string, std::vector<std::tuple<std::string, double>>> adjacencyList_;
+    std::unordered_map<std::string, std::vector<std::tuple<std::string, double>>> *adjacencyListP_;
 };
 
